@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-import re
-
-
 def safe_print_integer(value):
     is_int = True
     try:
