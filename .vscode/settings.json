@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "stdlib.h": "c"
+    },
+    "python.linting.flake8Enabled": false,
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.enabled": true
+}
