@@ -2,9 +2,7 @@
 def safe_print_integer(value):
     is_int = True
     try:
-        value / 3
+        print("{:d}".format(value))
     except (ValueError, TypeError):
         is_int = False
-    else:
-        print("{:d}".format(value))
     return is_int
