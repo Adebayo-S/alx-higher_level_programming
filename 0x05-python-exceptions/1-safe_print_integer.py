@@ -3,7 +3,7 @@ def safe_print_integer(value):
     is_int = True
     try:
         value / 3
-    except TypeError:
+    except (ValueError, TypeError):
         print(end='')
         is_int = False
     else:
