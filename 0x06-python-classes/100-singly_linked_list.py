@@ -70,6 +70,9 @@ class SinglyLinkedList():
     def __str__(self):
         temp = self.head_ptr
         c = ''
+        if not temp:
+            return c
+
         while temp.next_node:
             c += f'{temp.data}\n'
             temp = temp.next_node
