@@ -14,7 +14,7 @@ def pascal_triangle(n):
         return []
 
     if n == 1:
-        return p_triangle[0]
+        return [p_triangle[0]]
 
     for i in range(n-2):
         base = p_triangle[-1]
