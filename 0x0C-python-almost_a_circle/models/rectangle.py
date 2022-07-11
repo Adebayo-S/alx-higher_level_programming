@@ -60,7 +60,7 @@ class Rectangle(Base):
     @property
     def y(self):
         """getter y"""
-        return self.__x
+        return self.__y
 
     @y.setter
     def y(self, value):
@@ -77,7 +77,12 @@ class Rectangle(Base):
 
     def display(self):
         """Print a rectangle using #'s to stdout"""
+        if self.__y:
+            print("\n" * self.__y, end='')
+
         for i in range(self.__height):
+            if self.__x:
+                print(" " * self.__x, end='')
             print('#' * self.__width)
 
     def __str__(self):
@@ -85,3 +90,15 @@ class Rectangle(Base):
         return "[Rectangle] (" + str(self.id) + ") " + str(
             self.__x) + "/" + str(self.__y) + "- " + str(
                 self.__width) + "/" + str(self.__height)
+
+    def update(self, *args):
+        """
+        Update the class Rectangle by adding the public method
+        def update(self, *args): that assigns an argument to
+        each attribute
+        """
+        self.id = args[0] if 0 < len(args) else self.id
+        self.width = args[1] if 1 < len(args) else self.width
+        self.height = args[2] if 2 < len(args) else self.height
+        self.x = args[3] if 3 < len(args) else self.x
+        self.y = args[4] if 4 < len(args) else self.y
