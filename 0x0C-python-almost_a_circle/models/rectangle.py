@@ -115,3 +115,15 @@ class Rectangle(Base):
                     self.x = v
                 if k == 'y':
                     self.y = v
+
+    def to_dictionary(self):
+        """
+        to_dictionary method
+        """
+        return {
+            "id": self.id,
+            "width": self.__width,
+            "height": self.__height,
+            "x": self.__x,
+            "y": self.__y
+        }
