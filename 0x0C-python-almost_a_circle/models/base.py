@@ -26,6 +26,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """Save list of instances as json strings into file"""
         list_dict = []
         if list_objs is not None:
             for obj in list_objs:
@@ -35,6 +36,17 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """Returns Python obj from a json string representation"""
         if json_string is None or json_string == '':
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns instance with attributes already set"""
+        if cls.__name__ == "Square":
+            dummy = cls(3)
+        if cls.__name__ == "Rectangle":
+            dummy = cls(3, 5)
+        dummy.update(**dictionary)
+        return dummy
