@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
-let add = (a, b) => {
+const add = (a, b) => {
   console.log(a + b);
-}
+};
 
-let a = parseInt(process.argv[2]);
-let b = parseInt(process.argv[3]);
+const a = parseInt(process.argv[2]);
+const b = parseInt(process.argv[3]);
 add(a, b);
