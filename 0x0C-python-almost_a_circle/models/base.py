@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-class Base: is the base for all other classes in this project
+class Base: is the base for all other classes in this project.
 """
 import json
 import os
