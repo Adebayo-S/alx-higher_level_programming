@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const id = process.argv[2];
-const url = 'http://swapi.co/api/films/' + id + '/';
+const url = `https://swapi-api.hbtn.io/api/films/'${id}`;
 const request = require('request');
 
 request(url, function (err, response, body) {
@@ -14,3 +14,4 @@ request(url, function (err, response, body) {
     console.log('Erorr Code:' + response.statusCode);
   }
 });
+
